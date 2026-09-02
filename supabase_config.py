@@ -3,9 +3,9 @@ import os
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-# Supabase configuration
-SUPABASE_URL = "https://psupntfqbnyawrzugaeu.supabase.co"
-SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBzdXBudGZxYm55YXdyenVnYWV1Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4NzMyOTQwMCwiZXhwIjoyMTAyOTA1NDAwfQ.Bs2h2lmMjjpmDPLoU-KY_HR7OAr0-y9aNnC-G15T02s"
+# Supabase configuration - use environment variables
+SUPABASE_URL = os.getenv("SUPABASE_URL", "https://your-project.supabase.co")
+SUPABASE_KEY = os.getenv("SUPABASE_KEY", "your-anon-key-here")
 
 def get_supabase_config():
     return {

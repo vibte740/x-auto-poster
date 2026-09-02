@@ -17,15 +17,15 @@ LOG_FILE = LOG_DIR / "x_posts_log.json"
 TEMP_IMAGE = LOG_DIR / "temp_news.jpg"
 GOOGLE_NEWS_RSS = "https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en"
 
-# Notion config
-NOTION_TOKEN = "ntn_e95603980624b2C43gHL8t07GAmwgt7fSJKDmIzSfE09oR"
+# Notion config - use environment variables
+NOTION_TOKEN = os.getenv("NOTION_TOKEN", "your-notion-token-here")
 NOTION_API = "https://api.notion.com/v1"
 NOTION_VERSION = "2022-06-28"
-NOTION_PAGE_ID = "3cf239d8-18ee-803f-8e98-d3a6514ab7bd"
+NOTION_PAGE_ID = os.getenv("NOTION_PAGE_ID", "your-page-id-here")
 
-# Supabase config
-SUPABASE_URL = "https://psupntfqbnyawrzugaeu.supabase.co"
-SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBzdXBudGZxYm55YXdyenVnYWV1Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4NzMyOTQwMCwiZXhwIjoyMTAyOTA1NDAwfQ.Bs2h2lmMjjpmDPLoU-KY_HR7OAr0-y9aNnC-G15T02s"
+# Supabase config - use environment variables
+SUPABASE_URL = os.getenv("SUPABASE_URL", "https://your-project.supabase.co")
+SUPABASE_KEY = os.getenv("SUPABASE_KEY", "your-anon-key-here")
 
 # Initialize Supabase client
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
