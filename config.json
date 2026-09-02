@@ -1,0 +1,5 @@
+{
+  "compose_url": "https://x.com/compose/post",
+  "max_tweet_length": 270,
+  "news_categories": ["war", "finance"]
+}
